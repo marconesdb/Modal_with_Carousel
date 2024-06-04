@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals with Carousel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo de estilos CSS personalizado -->
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
+
+    <!-- Título -->
+    <h1 class="text-titulo text-2xl font-bold text-center mb-4 mt-4 py-2 px-4">Modal com Carousel</h1>
+     
+    <!-- Link que abre o Modal -->
+    <a class="button text-blue-500 hover:underline cursor-pointer" onclick="openModal('modal1')">Abre o modal e explore o carousel...</a>
+
+    <!-- Modal -->
+    <div id="modal1" class="modal">
+        <span class="close cursor-pointer" onclick="closeModal('modal1')">&times;</span> <!-- Botão para fechar o modal -->
+        
+        <!-- Carousel -->
+        <div class="carousel" id="carousel1">
+            <div class="carousel-inner">
+                <!-- Item do Carousel - Slide 1 -->
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <div class="carousel-text">
+                            Conteúdo Slide 1
+                        </div>
+                    </div>
+                </div>
+                <!-- Item do Carousel - Slide 2 -->
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <div class="carousel-text">
+                            Conteúdo Slide 2
+                        </div>
+                    </div>
+                </div>
+                <!-- Item do Carousel - Slide 3 -->
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <div class="carousel-text">
+                            Conteúdo Slide 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Botões de navegação do Carousel -->
+            <button class="carousel-button prev-button" onclick="prevSlide()">❮</button>
+            <button class="carousel-button next-button" onclick="nextSlide()">❯</button>
+        </div>
+        <!-- Fim do Carousel -->
+    </div>
+    <!-- Fim do Modal -->
+
+    <script src="./script.js"></script> <!-- Importa o arquivo de script JavaScript -->
+</body>
+</html>
